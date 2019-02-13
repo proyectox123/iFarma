@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84B960132213CA7E00BCC0C8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B960122213CA7E00BCC0C8 /* SignUpViewController.swift */; };
+		84B960172213CE1100BCC0C8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B960162213CE1100BCC0C8 /* Colors.xcassets */; };
 		E0A921B4221324E4000FF050 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A921B3221324E4000FF050 /* AppDelegate.swift */; };
 		E0A921B6221324E4000FF050 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A921B5221324E4000FF050 /* ViewController.swift */; };
 		E0A921B9221324E4000FF050 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0A921B7221324E4000FF050 /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84B960122213CA7E00BCC0C8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		84B960162213CE1100BCC0C8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		E0A921B0221324E4000FF050 /* iFarma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFarma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0A921B3221324E4000FF050 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0A921B5221324E4000FF050 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +41,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84B960142213CDCA00BCC0C8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E0A921BA221324E6000FF050 /* Assets.xcassets */,
+				84B960162213CE1100BCC0C8 /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		84B960152213CDD700BCC0C8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				E0A921B5221324E4000FF050 /* ViewController.swift */,
+				E0A921B7221324E4000FF050 /* Main.storyboard */,
+				E0A921C5221325FA000FF050 /* OnBoarding */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		84B960182213D08000BCC0C8 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				E0A921C722132640000FF050 /* SignUp.storyboard */,
+				84B960122213CA7E00BCC0C8 /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		E0A921A7221324E4000FF050 = {
 			isa = PBXGroup;
 			children = (
@@ -56,11 +88,9 @@
 		E0A921B2221324E4000FF050 /* iFarma */ = {
 			isa = PBXGroup;
 			children = (
-				E0A921C5221325FA000FF050 /* OnBoarding */,
+				84B960152213CDD700BCC0C8 /* Sources */,
+				84B960142213CDCA00BCC0C8 /* Resources */,
 				E0A921B3221324E4000FF050 /* AppDelegate.swift */,
-				E0A921B5221324E4000FF050 /* ViewController.swift */,
-				E0A921B7221324E4000FF050 /* Main.storyboard */,
-				E0A921BA221324E6000FF050 /* Assets.xcassets */,
 				E0A921BC221324E6000FF050 /* LaunchScreen.storyboard */,
 				E0A921BF221324E6000FF050 /* Info.plist */,
 			);
@@ -70,7 +100,7 @@
 		E0A921C5221325FA000FF050 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
-				E0A921C722132640000FF050 /* SignUp.storyboard */,
+				84B960182213D08000BCC0C8 /* SignUp */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -133,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B960172213CE1100BCC0C8 /* Colors.xcassets in Resources */,
 				E0A921BE221324E6000FF050 /* LaunchScreen.storyboard in Resources */,
 				E0A921BB221324E6000FF050 /* Assets.xcassets in Resources */,
 				E0A921C822132640000FF050 /* SignUp.storyboard in Resources */,
@@ -147,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B960132213CA7E00BCC0C8 /* SignUpViewController.swift in Sources */,
 				E0A921B6221324E4000FF050 /* ViewController.swift in Sources */,
 				E0A921B4221324E4000FF050 /* AppDelegate.swift in Sources */,
 			);
@@ -295,8 +327,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RFQ3RA57H9;
+				DEVELOPMENT_TEAM = L4VJ6K969P;
 				INFOPLIST_FILE = iFarma/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,8 +346,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RFQ3RA57H9;
+				DEVELOPMENT_TEAM = L4VJ6K969P;
 				INFOPLIST_FILE = iFarma/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

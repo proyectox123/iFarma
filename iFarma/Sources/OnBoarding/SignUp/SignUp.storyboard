@@ -4,8 +4,8 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,17 +25,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EvQ-yH-fc6">
-                                <rect key="frame" x="20" y="608" width="335" height="39"/>
+                                <rect key="frame" x="20" y="598" width="335" height="39"/>
+                                <color key="backgroundColor" name="darkBlueColor"/>
                                 <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="21"/>
                                 <state key="normal" title="Sign Up">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="signUp:" destination="aWQ-tI-z5L" eventType="touchUpInside" id="TjL-uV-5CL"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ROt-pY-tzw">
-                                <rect key="frame" x="20" y="98.5" width="335" height="489.5"/>
+                                <rect key="frame" x="20" y="108.5" width="335" height="469.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="y6V-wR-XnW">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="160"/>
@@ -86,7 +87,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Z2J-hd-EDC" firstAttribute="trailing" secondItem="Ejs-ek-3q1" secondAttribute="trailing" constant="20" id="7SY-HT-ZNp"/>
-                            <constraint firstAttribute="bottom" secondItem="EvQ-yH-fc6" secondAttribute="bottom" constant="20" id="GMb-ve-zBt"/>
+                            <constraint firstAttribute="bottom" secondItem="EvQ-yH-fc6" secondAttribute="bottom" constant="30" id="GMb-ve-zBt"/>
                             <constraint firstItem="Z2J-hd-EDC" firstAttribute="trailing" secondItem="ROt-pY-tzw" secondAttribute="trailing" constant="20" id="QIb-au-kjQ"/>
                             <constraint firstItem="EvQ-yH-fc6" firstAttribute="top" secondItem="ROt-pY-tzw" secondAttribute="bottom" constant="20" id="TX4-cB-zCv"/>
                             <constraint firstItem="Z2J-hd-EDC" firstAttribute="trailing" secondItem="EvQ-yH-fc6" secondAttribute="trailing" constant="20" id="U01-er-Vmd"/>
@@ -94,7 +95,7 @@
                             <constraint firstItem="ROt-pY-tzw" firstAttribute="leading" secondItem="Z2J-hd-EDC" secondAttribute="leading" constant="20" id="jVQ-gN-5J2"/>
                             <constraint firstItem="EvQ-yH-fc6" firstAttribute="leading" secondItem="Z2J-hd-EDC" secondAttribute="leading" constant="20" id="l6O-Xt-2XT"/>
                             <constraint firstItem="Ejs-ek-3q1" firstAttribute="top" secondItem="Z2J-hd-EDC" secondAttribute="top" constant="20" id="o9P-r2-YmW"/>
-                            <constraint firstItem="ROt-pY-tzw" firstAttribute="top" secondItem="Ejs-ek-3q1" secondAttribute="bottom" constant="20" id="oCK-7O-Oyf"/>
+                            <constraint firstItem="ROt-pY-tzw" firstAttribute="top" secondItem="Ejs-ek-3q1" secondAttribute="bottom" constant="30" id="oCK-7O-Oyf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Z2J-hd-EDC"/>
                     </view>
@@ -109,4 +110,9 @@
             <point key="canvasLocation" x="24.637681159420293" y="123.88392857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="darkBlueColor">
+            <color red="0.0" green="0.36078431372549019" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

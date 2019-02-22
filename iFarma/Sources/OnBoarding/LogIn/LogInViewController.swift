@@ -25,6 +25,12 @@ class LogInViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.isNavigationBarHidden = true
+    }
+    
     @IBAction func logIn(_ sender: Any) {
         let username = tUsername.text ?? ""
         let password = tPassword.text ?? ""
@@ -46,14 +52,18 @@ class LogInViewController: UIViewController {
                    parameters: parameters,
                    encoding: JSONEncoding.default,
                    headers: headers)
-            .responseJSON { response in
+            .responseJSON { [weak self] response in
             print("Request: \(String(describing: response.request))")   // original url request
             print("Response: \(String(describing: response.response))") // http url response
             print("Result: \(response.result)")                         // response serialization result
             
                 if let responses = response.result.value as? NSDictionary {
-                    let result = responses.object(forKey: "response")
-                    let detail = responses.object(forKey: "detail")
+                    let result = responses.object(forKey: "response") as? String
+                    let detail = responses.object(forKey: "detail") as? String
+                    
+                    if(result == "success"){
+                        self?.performSegue(withIdentifier: "loginMainSegueu", sender: nil)
+                    }
                     
                     let alert = UIAlertController(
                         title: "Alert",
@@ -65,12 +75,17 @@ class LogInViewController: UIViewController {
                         UIAlertAction(title: "OK", style: .default, handler: nil)
                     )
                     
-                    self.present(alert, animated: true, completion: nil)
+                    self?.present(alert, animated: true, completion: nil)
                 }else {
                     
                 }
             
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? ViewController
+        destination?.idSession = "ABCD"
     }
     
     private func initView(){

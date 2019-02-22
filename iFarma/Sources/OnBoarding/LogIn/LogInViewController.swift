@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import Foundation
 
 class LogInViewController: UIViewController {
 
@@ -29,6 +31,46 @@ class LogInViewController: UIViewController {
         
         print("username: \(username)")
         print("password: \(password)")
+        
+        let parameters: Parameters = [
+            "userID": username,
+            "password": password
+        ]
+        
+        let headers: HTTPHeaders = [
+             "Content-Type": "application/json"
+        ]
+        
+        AF.request("https://us-central1-trip-60746.cloudfunctions.net/login",
+                   method: .post,
+                   parameters: parameters,
+                   encoding: JSONEncoding.default,
+                   headers: headers)
+            .responseJSON { response in
+            print("Request: \(String(describing: response.request))")   // original url request
+            print("Response: \(String(describing: response.response))") // http url response
+            print("Result: \(response.result)")                         // response serialization result
+            
+                if let responses = response.result.value as? NSDictionary {
+                    let result = responses.object(forKey: "response")
+                    let detail = responses.object(forKey: "detail")
+                    
+                    let alert = UIAlertController(
+                        title: "Alert",
+                        message: "Result \(result) -> detail: \(detail)",
+                        preferredStyle: .alert
+                    )
+                    
+                    alert.addAction(
+                        UIAlertAction(title: "OK", style: .default, handler: nil)
+                    )
+                    
+                    self.present(alert, animated: true, completion: nil)
+                }else {
+                    
+                }
+            
+        }
     }
     
     private func initView(){

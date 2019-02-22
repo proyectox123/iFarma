@@ -11,6 +11,7 @@
 		84B960172213CE1100BCC0C8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B960162213CE1100BCC0C8 /* Colors.xcassets */; };
 		84B9601B2213D1EC00BCC0C8 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B9601A2213D1EC00BCC0C8 /* LogIn.storyboard */; };
 		84B9601D2213D56600BCC0C8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9601C2213D56600BCC0C8 /* LogInViewController.swift */; };
+		E0396D4D7A95C8E9480176BA /* Pods_iFarma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CAE7BD9BD346E710223D0F8 /* Pods_iFarma.framework */; };
 		E0A921B4221324E4000FF050 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A921B3221324E4000FF050 /* AppDelegate.swift */; };
 		E0A921B6221324E4000FF050 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A921B5221324E4000FF050 /* ViewController.swift */; };
 		E0A921B9221324E4000FF050 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0A921B7221324E4000FF050 /* Main.storyboard */; };
@@ -20,10 +21,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4CAE7BD9BD346E710223D0F8 /* Pods_iFarma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iFarma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6300582C1C3D74C8F8F60622 /* Pods-iFarma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iFarma.debug.xcconfig"; path = "Target Support Files/Pods-iFarma/Pods-iFarma.debug.xcconfig"; sourceTree = "<group>"; };
 		84B960122213CA7E00BCC0C8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		84B960162213CE1100BCC0C8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		84B9601A2213D1EC00BCC0C8 /* LogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
 		84B9601C2213D56600BCC0C8 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		9C6421875CC359DA786450C6 /* Pods-iFarma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iFarma.release.xcconfig"; path = "Target Support Files/Pods-iFarma/Pods-iFarma.release.xcconfig"; sourceTree = "<group>"; };
 		E0A921B0221324E4000FF050 /* iFarma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iFarma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0A921B3221324E4000FF050 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0A921B5221324E4000FF050 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,12 +43,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0396D4D7A95C8E9480176BA /* Pods_iFarma.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34282BF5B93818ED2C601F0F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CAE7BD9BD346E710223D0F8 /* Pods_iFarma.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84298506221E62FB0089F2E6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,11 +102,22 @@
 			path = LogIn;
 			sourceTree = "<group>";
 		};
+		B62EE1ED7A80E6D419A05710 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6300582C1C3D74C8F8F60622 /* Pods-iFarma.debug.xcconfig */,
+				9C6421875CC359DA786450C6 /* Pods-iFarma.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E0A921A7221324E4000FF050 = {
 			isa = PBXGroup;
 			children = (
 				E0A921B2221324E4000FF050 /* iFarma */,
 				E0A921B1221324E4000FF050 /* Products */,
+				B62EE1ED7A80E6D419A05710 /* Pods */,
+				34282BF5B93818ED2C601F0F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0A921C2221324E6000FF050 /* Build configuration list for PBXNativeTarget "iFarma" */;
 			buildPhases = (
+				A86E33D162A7B037E6800A4F /* [CP] Check Pods Manifest.lock */,
 				E0A921AC221324E4000FF050 /* Sources */,
 				E0A921AD221324E4000FF050 /* Frameworks */,
 				E0A921AE221324E4000FF050 /* Resources */,
+				5F0724234EE59F331A619AD9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,6 +221,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F0724234EE59F331A619AD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iFarma/Pods-iFarma-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iFarma/Pods-iFarma-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A86E33D162A7B037E6800A4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iFarma-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E0A921AC221324E4000FF050 /* Sources */ = {
@@ -348,10 +421,11 @@
 		};
 		E0A921C3221324E6000FF050 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6300582C1C3D74C8F8F60622 /* Pods-iFarma.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L4VJ6K969P;
+				DEVELOPMENT_TEAM = RFQ3RA57H9;
 				INFOPLIST_FILE = iFarma/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -367,10 +441,11 @@
 		};
 		E0A921C4221324E6000FF050 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C6421875CC359DA786450C6 /* Pods-iFarma.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L4VJ6K969P;
+				DEVELOPMENT_TEAM = RFQ3RA57H9;
 				INFOPLIST_FILE = iFarma/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

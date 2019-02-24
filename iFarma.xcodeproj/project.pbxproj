@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8433D05622224D0F00E4FBE3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433D05522224D0F00E4FBE3 /* BaseViewController.swift */; };
+		8433D05A22224E1400E4FBE3 /* LogInRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433D05922224E1400E4FBE3 /* LogInRequest.swift */; };
 		84B960132213CA7E00BCC0C8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B960122213CA7E00BCC0C8 /* SignUpViewController.swift */; };
 		84B960172213CE1100BCC0C8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B960162213CE1100BCC0C8 /* Colors.xcassets */; };
 		84B9601B2213D1EC00BCC0C8 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B9601A2213D1EC00BCC0C8 /* LogIn.storyboard */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		4CAE7BD9BD346E710223D0F8 /* Pods_iFarma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iFarma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6300582C1C3D74C8F8F60622 /* Pods-iFarma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iFarma.debug.xcconfig"; path = "Target Support Files/Pods-iFarma/Pods-iFarma.debug.xcconfig"; sourceTree = "<group>"; };
+		8433D05522224D0F00E4FBE3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		8433D05922224E1400E4FBE3 /* LogInRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInRequest.swift; sourceTree = "<group>"; };
 		84B960122213CA7E00BCC0C8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		84B960162213CE1100BCC0C8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		84B9601A2213D1EC00BCC0C8 /* LogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
@@ -67,6 +71,47 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		8433D0502222480800E4FBE3 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				84298506221E62FB0089F2E6 /* Main */,
+				E0A921C5221325FA000FF050 /* OnBoarding */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		8433D0512222481300E4FBE3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8433D0522222481B00E4FBE3 /* Remote */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8433D0522222481B00E4FBE3 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				8433D05B22224EA600E4FBE3 /* LogIn */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		8433D05422224CF400E4FBE3 /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				8433D05522224D0F00E4FBE3 /* BaseViewController.swift */,
+			);
+			path = Bases;
+			sourceTree = "<group>";
+		};
+		8433D05B22224EA600E4FBE3 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				8433D05922224E1400E4FBE3 /* LogInRequest.swift */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
 		84B960142213CDCA00BCC0C8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,7 +124,9 @@
 		84B960152213CDD700BCC0C8 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				E0A921C5221325FA000FF050 /* OnBoarding */,
+				8433D05422224CF400E4FBE3 /* Bases */,
+				8433D0512222481300E4FBE3 /* Data */,
+				8433D0502222480800E4FBE3 /* Features */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -144,7 +191,6 @@
 		E0A921C5221325FA000FF050 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
-				84298506221E62FB0089F2E6 /* Main */,
 				84B960192213D1B000BCC0C8 /* LogIn */,
 				84B960182213D08000BCC0C8 /* SignUp */,
 			);
@@ -274,10 +320,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8433D05622224D0F00E4FBE3 /* BaseViewController.swift in Sources */,
 				84B9601D2213D56600BCC0C8 /* LogInViewController.swift in Sources */,
 				84B960132213CA7E00BCC0C8 /* SignUpViewController.swift in Sources */,
 				E0A921B6221324E4000FF050 /* ViewController.swift in Sources */,
 				E0A921B4221324E4000FF050 /* AppDelegate.swift in Sources */,
+				8433D05A22224E1400E4FBE3 /* LogInRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,7 +473,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RFQ3RA57H9;
+				DEVELOPMENT_TEAM = L4VJ6K969P;
 				INFOPLIST_FILE = iFarma/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -445,7 +493,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RFQ3RA57H9;
+				DEVELOPMENT_TEAM = L4VJ6K969P;
 				INFOPLIST_FILE = iFarma/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

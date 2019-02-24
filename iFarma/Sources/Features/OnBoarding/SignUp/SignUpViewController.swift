@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: BaseViewController {
 
     @IBOutlet weak var tEmail: UITextField!
     @IBOutlet weak var tPassword: UITextField!
@@ -44,11 +44,5 @@ class SignUpViewController: UIViewController {
         setTextFieldStyle(textField: tEmail)
         setTextFieldStyle(textField: tPassword)
         setTextFieldStyle(textField: tNickname)
-    }
-    
-    private func setTextFieldStyle(textField: UITextField){
-        textField.layer.borderColor = UIColor(named: "lightBlueColor")?.cgColor
-        textField.layer.borderWidth = 1.0
-        textField.layer.cornerRadius = 8.0;
     }
 }

@@ -13,6 +13,12 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    public func setTextFieldStyle(textField: UITextField){
+        textField.layer.borderColor = UIColor(named: "lightBlueColor")?.cgColor
+        textField.layer.borderWidth = 1.0
+        textField.layer.cornerRadius = 8.0;
+    }
 }
 
 var vSpinner : UIView?

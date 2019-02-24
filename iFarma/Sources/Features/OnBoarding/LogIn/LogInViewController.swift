@@ -66,10 +66,4 @@ class LogInViewController: BaseViewController, OnLogInRequestProtocol {
         setTextFieldStyle(textField: tUsername)
         setTextFieldStyle(textField: tPassword)
     }
-    
-    private func setTextFieldStyle(textField: UITextField){
-        textField.layer.borderColor = UIColor(named: "lightBlueColor")?.cgColor
-        textField.layer.borderWidth = 1.0
-        textField.layer.cornerRadius = 8.0;
-    }
 }
